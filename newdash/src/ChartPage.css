@@ -1,0 +1,14 @@
+.chart-page {
+    padding: 20px;
+  }
+  
+  .chart-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
