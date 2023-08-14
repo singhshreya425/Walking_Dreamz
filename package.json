@@ -58,5 +58,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Build a COMPLETE React Admin Dashboard App | React, Material UI, Data Grid, Light & Dark Mode\r with custom Hooks and state management using usecontext",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
