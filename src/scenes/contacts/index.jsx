@@ -13,26 +13,21 @@ const Contacts = () => {
     { field: "id", headerName: "ID", flex: 0.5 },
     { field: "registrarId", headerName: "Registrar ID" },
     {
-      field: "name",
-      headerName: "Name",
+      field: "Country",
+      headerName: "Country",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
-      field: "age",
-      headerName: "Age",
+      field: "Active",
+      headerName: "Active",
       type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
-      field: "phone",
-      headerName: "Phone Number",
-      flex: 1,
-    },
-    {
-      field: "email",
-      headerName: "Email",
+      field: "cases",
+      headerName: "Cases Number",
       flex: 1,
     },
     {
@@ -55,8 +50,8 @@ const Contacts = () => {
   return (
     <Box m="20px">
       <Header
-        title="CONTACTS"
-        subtitle="List of Contacts for Future Reference"
+        title="COVID-19 Table"
+        subtitle="List of Covid-19 data"
       />
       <Box
         m="40px 0 0 0"

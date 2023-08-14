@@ -13,31 +13,26 @@ const Team = () => {
   const columns = [
     { field: "id", headerName: "ID" },
     {
-      field: "name",
-      headerName: "Name",
+      field: "Country",
+      headerName: "Country",
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
-      field: "age",
-      headerName: "Age",
+      field: "Active",
+      headerName: "Active",
       type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
-      field: "phone",
-      headerName: "Phone Number",
-      flex: 1,
-    },
-    {
-      field: "email",
-      headerName: "Email",
+      field: "cases",
+      headerName: "Cases Number",
       flex: 1,
     },
     {
       field: "accessLevel",
-      headerName: "Access Level",
+      headerName: " Level",
       flex: 1,
       renderCell: ({ row: { access } }) => {
         return (
@@ -70,7 +65,7 @@ const Team = () => {
 
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Managing the Team Members" />
+      <Header title="COVID-19 Data" subtitle="Managing the Data" />
       <Box
         m="40px 0 0 0"
         height="75vh"
