@@ -29,7 +29,7 @@ body,
   background: #888;
 }
 
-/* Handle on hover */
+/* Handle on hovers */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
