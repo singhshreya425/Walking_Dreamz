@@ -1,7 +1,7 @@
 # Covid-19 stats
 
 Build a COMPLETE React Admin Dashboard App | React, Material UI, Data Grid, Light & Dark Mode
-with custom Hooks and state management using usecontext
+with custom Hooks and state management using usecontext.
 
 
 # Getting Started with Create React App
