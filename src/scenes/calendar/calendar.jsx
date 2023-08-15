@@ -12,12 +12,15 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Header from "../../components/Header";
-import { tokens } from "../../theme";
+import Header from "../../components/Header";//custom component for displaying a header.
+import { tokens } from "../../theme";//generates colors based on the theme.
 
 
 //calendars
+
+//The Calendar component is defined as a functional component without any props.
 const Calendar = () => {
+  //theme is accessed using the useTheme hook, and colors are generated based on the theme using the tokens function. A state variable currentEvents and two event handler functions handleDateClick and handleEventClick .
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [currentEvents, setCurrentEvents] = useState([]);

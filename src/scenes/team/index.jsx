@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid } from "@mui/x-data-grid";//DataGrid component is displayed with mock team data and configured columns.
 import { tokens } from "../../theme";
 import { mockDataTeam } from "../../data/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
@@ -11,6 +11,7 @@ import Header from "../../components/Header";
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  //The configuration for the columns of the DataGrid is defined in the columns array.
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -32,6 +33,7 @@ const Team = () => {
       flex: 1,
     },
     {
+      //The "Level" column is configured with a custom cell renderer using icons and a Typography component to display the access level.
       field: "accessLevel",
       headerName: " Level",
       flex: 1,

@@ -3,12 +3,17 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
 //piechart
+
+//The PieChart component is defined as a functional component without any props.
 const PieChart = () => {
+  // theme is accessed using the useTheme hook, and colors are generated based on the theme using the tokens function.
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <ResponsivePie
+    //The data prop is set to the data imported from mockPieData.
       data={data}
+      //theme prop is provided to customize the appearance of the chart. It specifies the appearance of axes, legends, and ticks using the colors generated from the theme.
       theme={{
         axis: {
           domain: {

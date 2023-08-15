@@ -6,6 +6,8 @@ import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 
 //contacts
+
+//Contacts component is designed to display COVID-19 contact data in a tabular format using the DataGrid component
 const Contacts = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -86,6 +88,7 @@ const Contacts = () => {
           },
         }}
       >
+        {/*DataGrid component is used to render the tabular data. It receives the rows (contacts data), columns, and components props.*/}
         <DataGrid
           rows={mockDataContacts}
           columns={columns}

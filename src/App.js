@@ -17,8 +17,8 @@ import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 
 function App() {
-  const [theme, colorMode] = useMode();
-  const [isSidebar, setIsSidebar] = useState(true);
+  const [theme, colorMode] = useMode();//theme and colorMode are obtained from the useMode custom hook, which is related to theme management.
+  const [isSidebar, setIsSidebar] = useState(true);//isSidebar is a state variable to control the visibility of the sidebar.
 
   return (
     <ColorModeContext.Provider value={colorMode}>
@@ -43,6 +43,11 @@ function App() {
             </Routes>
           </main>
         </div>
+      {/*ColorModeContext.Provider, a ThemeProvider, and the main content of the application.
+      ColorModeContext.Provider is used to provide the color mode to child components.
+      ThemeProvider wraps the entire application to apply the defined theme.
+CssBaseline provides a consistent baseline for CSS styles.
+The main structure includes the Sidebar, Topbar, and a container for the main content.*/}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

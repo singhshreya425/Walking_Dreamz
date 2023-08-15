@@ -4,11 +4,13 @@ import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
 //linechart
 const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  //The LineChart component is defined as a functional component with two optional props: isCustomLineColors and isDashboard.
+  const theme = useTheme();//theme prop is provided to customize the appearance of the chart. It specifies the appearance of axes, legends, tooltips, and other elements using the colors generated from the theme
+  const colors = tokens(theme.palette.mode);//colors prop is conditionally set based on whether the chart is for a dashboard or not
 
   return (
     <ResponsiveLine
+    //data prop is set to the data imported from mockLineData.
       data={data}
       theme={{
         axis: {

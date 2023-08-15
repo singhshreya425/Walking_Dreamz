@@ -4,12 +4,15 @@ import { geoFeatures } from "../data/mockGeoFeatures";
 import { tokens } from "../theme";
 import { mockGeographyData as data } from "../data/mockData";
 //geographychart
+//The GeographyChart component is defined as a functional component with an optional isDashboard prop.
 const GeographyChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <ResponsiveChoropleth
+    //data prop is set to the data imported from mockGeographyData.
       data={data}
+      //theme prop is provided to customize the appearance of the chart. It specifies the appearance of axes, legends, and other elements using the colors generated from the theme.
       theme={{
         axis: {
           domain: {
@@ -38,6 +41,7 @@ const GeographyChart = ({ isDashboard = false }) => {
           },
         },
       }}
+      //features prop is set to the geoFeatures.features imported from mockGeoFeatures.
       features={geoFeatures.features}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       domain={[0, 1000000]}
@@ -49,6 +53,7 @@ const GeographyChart = ({ isDashboard = false }) => {
       projectionRotation={[0, 0, 0]}
       borderWidth={1.5}
       borderColor="#ffffff"
+      //legends prop is conditionally set based on whether the chart is for a dashboard or not. If it's not for a dashboard, a legend configuration is provided, otherwise, the legends are left undefined
       legends={
         !isDashboard
           ? [

@@ -8,6 +8,9 @@ import Header from "../../components/Header";
 const Invoices = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  //The configuration for the columns of the DataGrid is defined in the columns array.
+  //The columns array defines the fields and headers for the DataGrid.
+//The "Fund" column is configured with a custom cell renderer using a Typography component to display the fund amount.
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -66,6 +69,7 @@ const Invoices = () => {
           },
         }}
       >
+       {/*DataGrid component is displayed with mock invoice data and configured columns.*/}
         <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
       </Box>
     </Box>
